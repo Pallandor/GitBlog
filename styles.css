@@ -1,0 +1,75 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    color: #555;
+    background-color: #FDE3A7;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	font-size: 18px;
+}
+
+header {
+    background-color: #1abc9c;
+    
+}
+
+footer {
+    background-color: #16a085;
+    color: white;
+    text-align: center; 
+}
+
+.nav-display {
+	display:flex;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 20px;
+}
+
+nav .nav-display li a.active {
+	background-color: #16a085;
+}
+
+nav .nav-display li a:hover {
+	background-color: #16a085;
+}
+
+
+nav .nav-display li {
+	list-style: none;
+}
+
+nav .nav-display li a {
+	text-decoration: none;
+	border-radius: 5px;
+	color: white;
+	font-weight: 700;
+	margin-right: 15px;
+	padding: 10px 20px 10px;
+}
+
+.fullpage-container .container-fluid {
+    /*background-color: #F62459;*/
+}
+
+.content-container {
+   /* background-color: #F1A9A0;*/
+}
+
+.sidebar-container {
+    margin-top: 30px;
+    font-size: 16px;
+   /* background-color: #DCC6E0;*/
+}
+
+.sidebar-nav {
+    list-style-type: none;
+}
+
+ul .sidebar-nav li {
+	text-decoration: none;
+
+	padding: 40px 40px 50px 0px;
+}
