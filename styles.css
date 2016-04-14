@@ -4,6 +4,9 @@
     color: white;
 }
 
+input {
+    outline: 1px red solid;
+}
 
 .menu-header {
     /*position: fixed;*/
@@ -16,16 +19,44 @@
 /*  Fixing height caused issues with dropdown hiding behind nav*/
 }
 
+.menu-checkbox {
+    display: none;
+}
+
+
 body .rest-of-it {
     background-color:#344146;
     display: block;
 }
 
 .menu-ul {
+/*    hide menu by default*/
+    max-height: 0; 
     list-style: none;
     overflow: hidden;
     margin-right: 40px;
+    clear: both;
+    width: 500px;
 }
+
+.menu-label {
+    float: right;
+}
+
+/*Unless checkbox state has changed */
+.menu-checkbox:checked ~ .menu-ul {
+    max-height: 240px;
+}
+
+/*TESTING*/
+/*.menu-checkbox:checked ~ .menu-test {
+    outline: 10px red solid;
+}*/
+
+
+/*.menu-label {
+    float: left;
+}*/
 
 .menu-header li {
     border-radius: 5px;
@@ -45,6 +76,9 @@ ul li:last-child {
     padding: 20px 20px;
     text-decoration: none;
     text-align: center;
+    background-color: #42218B;
+    /*TEST*/
+   /* pointer-events: none;*/
 }
 
 
@@ -52,22 +86,33 @@ ul li:last-child {
     background-color: #42729B;
 }
 
-.menu-header ul {
-    /*max-height: 0;*//* This hides the block menu stuff*/
-   /* float: right;*/
+/*.menu-header ul {
+    max-height: 0;*/ /*This hides the block menu stuff*/
+   /* float: right;
     z-index: 5;
-}
+}*/
 
-a.menu-hamburger {
+
+span.menu-hamburger {
+    cursor: pointer;
+    float: right;
+    padding: 18px 10px;
+    margin-right: 20px;
+    position: relative;
+    user-select: none;
+}
+/*INSTEAD we'll try for the whole label element enclosing .menu-hamburger..*/
+/*label.menu-label {
     cursor: pointer;
     float: right;
     padding: 28px 20px;
     margin-right: 20px;
     position: relative;
     user-select: none;
-}
+}*/
 
 @media (min-width: 670px) {
+
     .menu-header ul {
         max-height: none;
     }
@@ -75,7 +120,7 @@ a.menu-hamburger {
         float: left;
         border: 0;
     }
-    .menu-header li a {
+    .menu-header li span {
         padding: 10px 10px;
     }
     .menu-hamburger {
